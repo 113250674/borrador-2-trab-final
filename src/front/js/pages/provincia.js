@@ -1,21 +1,15 @@
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
-import "../../styles/home.scss";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-export const Home = () => {
+import { Context } from "../store/appContext";
+
+import "../../styles/demo.scss";
+
+export const Provincia = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="text-center mt-5">
-			<h1 />
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">{store.message || ""}</div>
-			<p />
-			Busc@ Pymes{" "}
+		<div className="container">
 			<ul className="list-group">
 				{store.provincia.map((item, index) => {
 					return (
@@ -24,12 +18,13 @@ export const Home = () => {
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background }}>
 							<Link to={"/single/" + index}>
-								<span>{item.title}</span>
+								<span> {item.title}</span>
 							</Link>
 						</li>
 					);
 				})}
 			</ul>
+			<br />
 		</div>
 	);
 };
