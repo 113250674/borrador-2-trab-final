@@ -4,9 +4,10 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { Provincia } from "./pages/provincia";
+import { Alajuela } from "./pages/alajuela";
 import { Single } from "./pages/single";
 import { Registro_pymes } from "./pages/registro_pymes";
-import injectContext from "./store/appContext";
+import { InjectContext } from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -23,18 +24,12 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/provincia">
-							<Provincia />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
+						<Route exact path="/" component={Home} />
+						<Route exact path="/home" component={Home} />
+						<Route exact path="/provincia" component={provincia} />
+						<Route exact path="/alajuela" component={alajuela} />
+						<Route exact path="/single/:theid" component={single} />
+						<Route exact path="/registro_pymes" component={Registro_pymes} />
 					</Switch>
 					<Footer />
 				</ScrollToTop>
