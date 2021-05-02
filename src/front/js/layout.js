@@ -7,7 +7,7 @@ import { Provincia } from "./pages/provincia";
 import { Alajuela } from "./pages/alajuela";
 import { Single } from "./pages/single";
 import { Registro_pymes } from "./pages/registro_pymes";
-import { InjectContext } from "./store/appContext";
+import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -26,9 +26,9 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
-						<Route exact path="/provincia" component={provincia} />
-						<Route exact path="/alajuela" component={alajuela} />
-						<Route exact path="/single/:theid" component={single} />
+						<Route exact path="/provincia" component={Provincia} />
+						<Route exact path="/alajuela" component={Alajuela} />
+						<Route exact path="/single/:theid" component={Single} />
 						<Route exact path="/registro_pymes" component={Registro_pymes} />
 					</Switch>
 					<Footer />
