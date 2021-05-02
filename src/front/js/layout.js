@@ -12,7 +12,8 @@ import { Guanacaste } from "./pages/guanacaste";
 import { Limon } from "./pages/limon";
 import { Heredia } from "./pages/heredia";
 import { Single } from "./pages/single";
-import { Registro_pymes } from "./pages/registro_pymes";
+import { Registropymes } from "./pages/registropymes";
+import { Actualizardatos } from "./pages/actualizardatos";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -40,8 +41,9 @@ const Layout = () => {
 						<Route exact path="/puntarenas" component={Puntarenas} />
 						<Route exact path="/limon" component={Limon} />
 						<Route exact path="/cartago" component={Cartago} />
+						<Route exact path="/registropymes" component={Registropymes} />
+						<Route exact path="/actualizardatos" component={Actualizardatos} />
 						<Route exact path="/single/:theid" component={Single} />
-						<Route exact path="/registro_pymes" component={Registro_pymes} />
 					</Switch>
 					<Footer />
 				</ScrollToTop>

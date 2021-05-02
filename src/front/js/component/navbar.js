@@ -8,7 +8,7 @@ export const Navbar = () => {
 				<button className=" bg-dark text-white-50 navbar-brand mb-0 h1"> Inicio</button>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/registro_pymes">
+				<Link to="/registropymes">
 					<button className=" bg-dark text-white-50 navbar-brand mb-0 h1"> Acceso Pymes</button>
 				</Link>
 			</div>

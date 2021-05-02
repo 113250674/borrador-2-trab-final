@@ -5,13 +5,17 @@ import { Home } from "./home";
 export const Alajuela = alajuela => {
 	return (
 		<div className="container">
-			<table className="table table-sm table-dark">
+			<table className="table table-sl table-dark">
 				<thead>
 					<tr>
 						<th scope="col">#</th>
-						<th scope="col">First</th>
-						<th scope="col">Last</th>
-						<th scope="col">Handle</th>
+						<th scope="col">Provincia</th>
+						<th scope="col">Cantón</th>
+						<th scope="col">Nombre PYMES</th>
+						<th scope="col">Servicio</th>
+						<th scope="col">Teléfono</th>
+						<th scope="col">Facebook</th>
+						<th scope="col">Instagram</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -20,19 +24,30 @@ export const Alajuela = alajuela => {
 						<td>Mark</td>
 						<td>Otto</td>
 						<td>@mdo</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>@mdo</td>
 					</tr>
 					<tr>
 						<th scope="row">2</th>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>@mdo</td>
 					</tr>
 					<tr>
 						<th scope="row">3</th>
-						<td col span="2">
-							Larry the Bird
-						</td>
-						<td>@twitter</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>@mdo</td>
 					</tr>
 				</tbody>
 			</table>
