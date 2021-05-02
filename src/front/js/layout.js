@@ -5,6 +5,12 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Provincia } from "./pages/provincia";
 import { Alajuela } from "./pages/alajuela";
+import { Cartago } from "./pages/cartago";
+import { Puntarenas } from "./pages/puntarenas";
+import { Sanjose } from "./pages/sanjose";
+import { Guanacaste } from "./pages/guanacaste";
+import { Limon } from "./pages/limon";
+import { Heredia } from "./pages/heredia";
 import { Single } from "./pages/single";
 import { Registro_pymes } from "./pages/registro_pymes";
 import injectContext from "./store/appContext";
@@ -28,6 +34,12 @@ const Layout = () => {
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/provincia" component={Provincia} />
 						<Route exact path="/alajuela" component={Alajuela} />
+						<Route exact path="/heredia" component={Heredia} />
+						<Route exact path="/guanacaste" component={Guanacaste} />
+						<Route exact path="/sanjose" component={Sanjose} />
+						<Route exact path="/puntarenas" component={Puntarenas} />
+						<Route exact path="/limon" component={Limon} />
+						<Route exact path="/cartago" component={Cartago} />
 						<Route exact path="/single/:theid" component={Single} />
 						<Route exact path="/registro_pymes" component={Registro_pymes} />
 					</Switch>

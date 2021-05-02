@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/demo.scss";
 import { Home } from "./home";
 
-export const Alajuela = alajuela => {
+export const Sanjose = sanjose => {
 	return (
 		<div className="container">
 			<table className="table table-sm table-dark">

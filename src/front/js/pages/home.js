@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+import rigoImageUrl from "../../img/rigo-baby.jpeg";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
+
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
@@ -14,20 +15,21 @@ export const Home = () => {
 			</p>
 			<div className="alert alert-info">{store.message || ""}</div>
 			<p />
-			Busc@ Pymes ;
-			<div>
-				<h1>I am the home</h1>
-				<ul>
-					<li>
-						<Link to="/cartago">Go to product 2 (normal link)</Link>
-					</li>
-					<li>
-						<button onClick={() => this.props.history.push("/alajuela")}>
-							Go to product 3 (history.push)
-						</button>
-					</li>
-				</ul>
-			</div>
+			Busc@ Pymes{" "}
+			<ul className="list-group">
+				{store.provincia.map((item, index) => {
+					return (
+						<li
+							key={index}
+							className="list-group-item d-flex justify-content-between"
+							style={{ background: item.background }}>
+							<Link to={"/single/" + index}>
+								<span>{item.title}</span>
+							</Link>
+						</li>
+					);
+				})}
+			</ul>
 		</div>
 	);
 };
